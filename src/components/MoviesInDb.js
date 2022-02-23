@@ -6,7 +6,7 @@ class MoviesInDb extends Component {
         super()
         this.state = {
 
-           moviesList : []
+           usersList : []
 
         }
     }
@@ -15,13 +15,13 @@ class MoviesInDb extends Component {
 
     componentDidMount(){
 
-        fetch("http://localhost:3000/api/movies")
+        fetch("http://localhost:3002/data/user")
         
         .then(res=>res.json())
         
-        .then(movies =>{
-            console.log(movies)
-            this.setState({moviesList: movies.data})
+        .then(users =>{
+            console.log(users)
+            this.setState({moviesList: users.data})
         })
         .catch(error => console.log(error))
 
@@ -39,21 +39,21 @@ class MoviesInDb extends Component {
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Categoria de usuario</th>
+                                <th>Imagen</th>
                             </tr>
                         </thead>
                        
                         <tbody>
                     {
 
-                        this.state.moviesList.map((movie, index)=> {
+                        this.state.usersList.map((user, index)=> {
 
 
-                            return <ChartRow  {...movie} key = {index} />
+                            return <ChartRow  {...user} key = {index} />
 
 
                         })
