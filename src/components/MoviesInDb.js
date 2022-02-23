@@ -21,7 +21,7 @@ class MoviesInDb extends Component {
         
         .then(users =>{
             console.log(users)
-            this.setState({moviesList: users.data})
+            this.setState({usersList: users.data})
         })
         .catch(error => console.log(error))
 
