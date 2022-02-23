@@ -15,9 +15,9 @@ let usersInDb = {
 
 let totalProducts = {
 
-    title: 'Total awards',
+    title: 'Celulares',
     color: 'success',
-    icon: 'fa-award',
+    icon: 'fa-solid fa-mobile-screen',
     quantity: 79
 }
 
@@ -35,6 +35,7 @@ let cartProps = [usersInDb, totalProducts, actorsQuantity]
 
 
 function ContentRowMovies () {
+
 
     return (
 

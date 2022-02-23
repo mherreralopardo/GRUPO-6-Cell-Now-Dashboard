@@ -7,20 +7,20 @@ class GenresInDb extends Component {
         super()
         this.state = {
 
-            genresList : []
+            marksList : []
 
         }
     }
 
     componentDidMount(){
 
-        fetch("http://localhost:3002/data/user")
+        fetch("http://localhost:3002/data/mark")
         
         .then(res=>res.json())
         
-        .then(genres =>{
-            console.log(genres)
-            this.setState({genresList: genres.data})
+        .then(marks =>{
+            console.log(marks)
+            this.setState({marksList: marks.data})
         })
         .catch(error => console.log(error))
 
@@ -36,15 +36,15 @@ render () {
         <div className="col-lg-6 mb-4">						
 					<div className="card shadow mb-4">
 							<div className="card-header py-3">
-									<h5 className="m-0 font-weight-bold text-gray-800"> Genres in Date Base </h5>
+									<h5 className="m-0 font-weight-bold text-gray-800"> ¿Qué marcas comprar en Cellnow? </h5>
                             </div>
                     <div className="row" style={{paddingTop: 26}}>
 
                             {
                             
-                                this.state.genresList.map((genre, index)=> {
+                                this.state.marksList.map((mark, index)=> {
 
-                                 return <Genre  {...genre} key = {index} />
+                                 return <Genre  {...mark} key = {index} />
 
                                 })
                                              

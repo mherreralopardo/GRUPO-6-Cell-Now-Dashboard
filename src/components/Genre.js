@@ -10,7 +10,7 @@ function Genre(props) {
         <div className="col-lg-6 mb-4">
 		    <div className="card bg-dark text-white shadow" style={{marginLeft: 8, marginRight: 8,}}>
 			 <div className="card-body">
-            <Link to={`/categories/${props.id}`} style={{color:"white", textDecoration: 'none'}}>
+            <Link to={`/categories/${props.name}`} style={{color:"white", textDecoration: 'none'}}>
 					{props.name}		
              </Link>					
 			 </div>
