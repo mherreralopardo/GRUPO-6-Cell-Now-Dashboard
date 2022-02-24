@@ -7,11 +7,14 @@ function ChartRow(props){
 
     return (
                 <tr>
-                    <td>{props.firstName}</td>
-                    <td>{props.lastName}</td>
-                    <td>{props.email}</td>
-                    <td>{props.userCategory} </td>
-                    <td>{props.avatar}</td>
+                    <td>{props.model}</td>
+                    <td>{props.price}</td>
+                    <td>{props.discount}</td>
+                    <td>{props.description} </td>
+                    <td>{props.camera}</td>
+                    <td>{props.screen} </td>
+                    <td>{props.memory}</td>
+                    <td>{props.image} </td>
                 </tr>
             )
     }

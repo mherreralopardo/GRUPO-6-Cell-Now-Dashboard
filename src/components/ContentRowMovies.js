@@ -22,7 +22,7 @@ let totalProducts = {
 }
 
 let actorsQuantity = {
-    title: 'Actors quantity',
+    title: 'Categorías',
     color: 'warning',
     icon: '<FontAwesomeIcon icon="fa-solid fa-mobile-screen',
     quantity: 49
