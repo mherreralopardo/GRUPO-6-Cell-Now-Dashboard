@@ -35,7 +35,7 @@ return(
 										{/* <span>{product[i].name}</span> NOMBRE DEL PRODUCTO*/}
 										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 10 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
 									</div>
-									{/* <p>DESCRIPCIÓN DEL PRODUCTO</p> */}
+									{/* <p>DESCRIPCIÓN DEL</p> */}
 									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Detalle del producto</a>
 								</div>
 							</div>
