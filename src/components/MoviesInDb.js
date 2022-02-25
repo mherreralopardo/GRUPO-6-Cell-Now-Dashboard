@@ -5,12 +5,9 @@ class MoviesInDb extends Component {
     constructor(){
         super()
         this.state = {
-
            productsList : []
-
         }
     }
-
     componentDidMount(){
 
         fetch("http://localhost:3002/data/product")
@@ -22,14 +19,10 @@ class MoviesInDb extends Component {
             this.setState({productsList: products.data})
         })
         .catch(error => console.log(error))
-
     }
 
-
     render () {
-
         return (
-  
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
             <div className="card-body">
@@ -47,20 +40,12 @@ class MoviesInDb extends Component {
                                 <th>Imagen</th>
                             </tr>
                         </thead>
-                       
                         <tbody>
                     {
-
                         this.state.productsList.map((product, index)=> {
-
-
                             return <ChartRow  {...product} key = {index} />
-
-
                         })
-
                     }
-
                         </tbody>
                     </table>
                 </div>
