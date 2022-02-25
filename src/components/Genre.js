@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-function switchMark(name){
-    console.log("switch Mark ", name);
-    return name;
-}
+
   
 function Genre(props) {
 
@@ -15,7 +12,7 @@ function Genre(props) {
                 <div className="card bg-dark text-white shadow" style={{ marginLeft: 8, marginRight: 8, }}>
                     <div className="card-body">
                         <Link to={`/categories/${props.markId}`} style={{ color: "white", textDecoration: 'none' }}>
-                            {props.markId + " " + switchMark(props.totalMark)
+                            {props.markId + " " 
                             }
                         </Link>
                     </div>
