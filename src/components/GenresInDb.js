@@ -7,8 +7,23 @@ class GenresInDb extends Component {
     constructor(){
         super()
         this.state = {
-            totalmarksList : []
+            totalmarksList : [],
+            marksList : []
         }
+    }
+    componentDidMount(){
+
+        fetch("http://localhost:3002/data/mark")
+        
+        .then(res=>res.json())
+        
+        .then(totalMark =>{
+            console.log("algo2", totalMark)
+            this.setState({totalmarksList: totalMark.data})
+           
+        })
+        .catch(error => console.log(error))
+        
     }
     componentDidMount(){
 
@@ -16,22 +31,11 @@ class GenresInDb extends Component {
         
         .then(res=>res.json())
         
-        .then(totalMark =>{
-            
-            this.setState({totalmarksList: totalMark.data})
-           alert (console.log("algo", totalMark))
+        .then(marks =>{
+            console.log("algo", marks)
+            this.setState({marksList: marks.data})
         })
         .catch(error => console.log(error))
-
-        // fetch("http://localhost:3002/data/mark/totalMarks")
-        
-        // .then(res=>res.json())
-        
-        // .then(marks =>{
-        //     console.log(marks)
-        //     this.setState({marksList: marks.data})
-        // })
-        // .catch(error => console.log(error))
     }
 
 render () {
@@ -47,6 +51,11 @@ render () {
                     {
                         this.state.totalmarksList.map((totalMark, index)=> {
                             return <Genre  {...totalMark} key = {index} />
+                        })
+                    }
+                    {
+                        this.state.marksList.map((mark, index)=> {
+                            return <Genre  {...mark} key = {index} />
                         })
                     }
                     </div>
