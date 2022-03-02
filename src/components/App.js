@@ -6,7 +6,7 @@ import React from 'react';
 import SideBar from './SideBar';
 import Footer from './Footer';
 import TopBar from './TopBar'
-import SearchMovies from './SearchMovies';
+import SearchCellphone from './SearchCellphone';
 
 
 

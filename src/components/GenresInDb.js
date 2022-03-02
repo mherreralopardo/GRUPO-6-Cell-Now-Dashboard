@@ -1,68 +1,59 @@
-import React, { Component } from "react";
-import Genre from "./Genre";
-import axios from "axios"
+// import React, { Component } from "react";
+// import Genre from "./Genre";
+// import axios from "axios"
 
 
-class GenresInDb extends Component {
-    constructor(){
-        super()
-        this.state = {
-            totalmarksList : [],
-            marksList : []
-        }
-    }
-    componentDidMount(){
+// class GenresInDb extends Component {
+//     constructor(){
+//         super()
+//         this.state = {
+//             totalmarksList : []
+//         }
+//     }
+//     componentDidMount(){
 
-        fetch("http://localhost:3002/data/mark")
+//         fetch("http://localhost:3002/data/mark/totalMarks")
         
-        .then(res=>res.json())
+//         .then(res=>res.json())
         
-        .then(totalMark =>{
-            console.log("algo2", totalMark)
-            this.setState({totalmarksList: totalMark.data})
-           
-        })
-        .catch(error => console.log(error))
-        
-    }
-    componentDidMount(){
+//         .then(totalMark =>{
+            
+//             this.setState({totalmarksList: totalMark.data})
+//            alert (console.log("algo", totalMark))
+//         })
+//         .catch(error => console.log(error))
 
-        fetch("http://localhost:3002/data/mark/totalMarks")
+//         // fetch("http://localhost:3002/data/mark/totalMarks")
         
-        .then(res=>res.json())
+//         // .then(res=>res.json())
         
-        .then(marks =>{
-            console.log("algo", marks)
-            this.setState({marksList: marks.data})
-        })
-        .catch(error => console.log(error))
-    }
+//         // .then(marks =>{
+//         //     console.log(marks)
+//         //     this.setState({marksList: marks.data})
+//         // })
+//         // .catch(error => console.log(error))
+//     }
 
-render () {
+// render () {
 
-    return (       
-        <>        
-        <div className="col-lg-6 mb-4">						
-			<div className="card shadow mb-4">
-				<div className="card-header py-3">
-					<h5 className="m-0 font-weight-bold text-gray-800"> ¿Qué marcas comprar en Cellnow? </h5>
-                </div>
-                    <div className="row" style={{paddingTop: 26}}>
-                    {
-                        this.state.totalmarksList.map((totalMark, index)=> {
-                            return <Genre  {...totalMark} key = {index} />
-                        })
-                    }
-                    {
-                        this.state.marksList.map((mark, index)=> {
-                            return <Genre  {...mark} key = {index} />
-                        })
-                    }
-                    </div>
-            </div>			
-        </div>     
-        </>
-    )
-}
-}
-export default GenresInDb
+//     return (       
+//         <>        
+//         <div className="col-lg-6 mb-4">						
+// 			<div className="card shadow mb-4">
+// 				<div className="card-header py-3">
+// 					<h5 className="m-0 font-weight-bold text-gray-800"> ¿Qué marcas comprar en Cellnow? </h5>
+//                 </div>
+//                     <div className="row" style={{paddingTop: 26}}>
+//                     {
+//                         this.state.totalmarksList.map((totalMark, index)=> {
+//                             return <Genre  {...totalMark} key = {index} />
+//                         })
+//                     }
+//                     </div>
+//             </div>			
+//         </div>     
+//         </>
+//     )
+// }
+// }
+// export default GenresInDb

@@ -1,8 +1,8 @@
 import React from 'react';
-import ContentRowMovies from './ContentRowMovies';
-import LastProductInDb from './LastMovieInDb';
-import GenresInDb from './GenresInDb';
-import MoviesInDb from './MoviesInDb';
+import ContentRowCellphone from './ContentRowCellphone';
+import LastCellphoneInDb from './LastCellphoneInDb';
+import CategoryInDb from './CategoryInDb';
+import CellphonesInDb from './CellphonesInDb';
 
 
 function ContentRowTop(){
@@ -14,12 +14,12 @@ function ContentRowTop(){
 						<h1 className="h3 mb-0 text-gray-800">Cellnow Dashboard</h1>
 					</div>
 			
-					<ContentRowMovies />
+					<ContentRowCellphone />
 					<div className='row'>
-						<LastProductInDb />
-						<GenresInDb />
+						<LastCellphoneInDb />
+						<CategoryInDb />
 					</div>
-					<MoviesInDb />
+					<CellphonesInDb />
 
 				</div>
 

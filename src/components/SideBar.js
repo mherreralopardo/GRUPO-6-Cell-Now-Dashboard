@@ -6,12 +6,12 @@ import {Route, Routes, Link} from 'react-router-dom'
 
 
 import Error404 from './Error404';
-import GenresInDb from './GenresInDb';
-import MoviesInDb from './MoviesInDb';
-import ContentRowMovies from './ContentRowMovies';
+import CategoryInDb from './CategoryInDb';
+import CellphonesInDb from './CellphonesInDb';
+import ContentRowCellphone from './ContentRowCellphone';
 import CategoriesDetail from './CategoriesDetail';
 import ContentWrapper from './ContentWrapper';
-import SearchMovies from './SearchMovies';
+import SearchCellphone from './SearchCellphone';
 
 
 
@@ -47,7 +47,7 @@ function SideBar(){
                 <li className="nav-item">
                      <Link className="nav-link collapsed" to="/stats">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Stats</span>
+                        <span>Estadísticas</span>
                     </Link>
                     
                 </li>
@@ -56,7 +56,7 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/categories">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Categories</span>
+                        <span>Nuestras marcas</span>
                     </Link>
                 </li>
                 
@@ -65,14 +65,14 @@ function SideBar(){
                 <li className="nav-item">
                     <a className="nav-link" href="/table">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                        <span>Nuestros productos</span></a>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/SearchMovies">
+                    <Link className="nav-link" to="/SearchCellphone">
                         <i className="fas fa-search"></i>
-                        <span>Search a movie</span>
+                        <span>Encontrá tu celular ideal</span>
                     </Link>
                 </li>
                 {/*<!-- Divider -->*/}
@@ -85,11 +85,11 @@ function SideBar(){
     <Routes>
           
         <Route path="/" element = {<ContentWrapper />} />
-        <Route path="/stats" element = {<div className='col-8'> <ContentRowMovies /></div>} />
-        <Route path="/categories" element =  {<GenresInDb />} />
-        <Route path="/table" element = {<MoviesInDb />} />
+        <Route path="/stats" element = {<div className='col-8'> <ContentRowCellphone /></div>} />
+        <Route path="/categories" element =  {<CategoryInDb />} />
+        <Route path="/table" element = {<CellphonesInDb />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
-        <Route path="/SearchMovies" element = {<SearchMovies />} />
+        <Route path="/SearchCellphone" element = {<SearchCellphone />} />
         
 
 
