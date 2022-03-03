@@ -7,13 +7,13 @@ function SearchMovies(){
 	const ElInput = useRef();
 
 
-	const [movies, setMovies] = useState([]);
+	const [cellphones, setCellpgone] = useState([]);
 
 	useEffect(()=> {
 		console.log ("Se montó el componente")
-		axios.get('http://localhost:3000/api/movies')
+		axios.get('http://localhost:3002/data/product')
   .then(function (response) {
-    setMovies(response.data)
+    setCellpgone(response.data)
   })
   .catch(function (error) {
     // handle error
@@ -22,28 +22,28 @@ function SearchMovies(){
 
 	},[])
 
-	// useEffect(()=> {
-	// 	console.log ("Se actualizó el componente")
+	useEffect(()=> {
+		console.log ("Se actualizó el componente")
 
-	// },[movies])
+	},[cellphones])
 
-	// const movies = [
-	// 	{
-	// 		"Title": "Parchís",
-	// 		"Year": "1983",
-	// 		"Poster": "https://m.media-amazon.com/images/M/MV5BYTgxNjg2MTAtYjhmYS00NjQwLTk1YTMtNmZmOTMyNTAwZWUwXkEyXkFqcGdeQXVyMTY5MDE5NA@@._V1_SX300.jpg"
-	// 	},
-	// 	{
-	// 		"Title": "Brigada en acción",
-	// 		"Year": "1977",
-	// 		"Poster": "N/A"
-	// 	},
-	// ];
+	const movies = [
+		{
+			"Title": "Parchís",
+			"Year": "1983",
+			"Poster": "https://m.media-amazon.com/images/M/MV5BYTgxNjg2MTAtYjhmYS00NjQwLTk1YTMtNmZmOTMyNTAwZWUwXkEyXkFqcGdeQXVyMTY5MDE5NA@@._V1_SX300.jpg"
+		},
+		{
+			"Title": "Brigada en acción",
+			"Year": "1977",
+			"Poster": "N/A"
+		},
+	];
 
-	// const keyword = 'PELÍCULA DEMO';
+	const keyword = 'PELÍCULA DEMO';
 
-	// // Credenciales de API
-	// const apiKey = '4cf1ab5e'; // Intenta poner cualquier cosa antes para probar
+	// Credenciales de API
+	const apiKey = '4cf1ab5e'; // Intenta poner cualquier cosa antes para probar
 
 
 
@@ -73,7 +73,7 @@ function SearchMovies(){
 									<div className="col-sm-6 col-md-3 my-4" key={i}>
 										<div className="card shadow mb-4">
 											<div className="card-header py-3">
-												<h5 className="m-0 font-weight-bold text-gray-800">{movie.Title}</h5>
+												<h5 className="m-0 font-weight-bold text-gray-800">{movie.model}</h5>
 											</div>
 											<div className="card-body">
 												<div className="text-center">

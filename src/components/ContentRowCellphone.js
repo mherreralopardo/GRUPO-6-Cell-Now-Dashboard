@@ -52,7 +52,7 @@ class ContentRowCellphone extends Component {
     }
     
     const actorsQuantity = {
-        title: 'Categorías',
+        title: 'Marcas',
         color: 'warning',
         icon: 'fa-solid fa-chart-bar',
         quantity: this.state.MarkList.length

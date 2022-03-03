@@ -11,9 +11,10 @@ function ChartRow(props){
             <td>{props.camera}</td>
             <td>{props.screen} </td>
             <td>{props.memory}</td>
-            <td>{props.image} </td>
+            <td><img style={{ width: 50 + 'px' }} src={"http://localhost:3002/img/products/"+props.image}/></td>
         </tr>
     )
 }
+
 
 export default ChartRow;
