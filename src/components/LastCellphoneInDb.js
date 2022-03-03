@@ -1,6 +1,7 @@
 
 import React, { Component } from "react"
 
+
 class LastCellphoneInDb extends Component {
     constructor() {
         super()
@@ -19,7 +20,6 @@ componentDidMount() {
 		this.setState({cellphoneList: cellPhone.data})
 	})
 	.catch(error => console.log(error))
-	console.log(this.state.cellphoneList)
 }
 
 
@@ -49,3 +49,14 @@ render() {
 }
 
 export default LastCellphoneInDb
+
+// 	function idMax(numArray) {
+// 		let cellPhoneId = this.state.cellphoneList.id;
+// 		let idTotal = [];
+// 		for (let i = 0; i < cellPhoneId.length; i++){
+// 			if (cellPhoneId[i] > 0) {
+// 			idTotal++;
+// 		  }
+// 		}
+// 	console.log(Math.max.apply(idTotal));
+//   }
