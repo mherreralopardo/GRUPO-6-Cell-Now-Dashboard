@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Genre from "./Genre";
 import axios from "axios"
+import CategoriesDetail from "./CategoriesDetail";
 
 
 class CategoryInDb extends Component {

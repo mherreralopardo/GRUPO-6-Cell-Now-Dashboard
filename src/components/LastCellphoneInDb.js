@@ -38,7 +38,7 @@ render() {
 								<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 300 + 'px' }} src={"http://localhost:3002/img/products/"+this.state.cellphoneList.image} alt={this.state.cellphoneList.name} />
 							</div>
 						<p>{this.state.cellphoneList.description}</p>
-						<a className="btn btn-danger" target="_blank" rel="nofollow" href={"http://localhost:3002/product/detail/"+this.state.cellphoneList.id} >Detalle del producto</a>
+						<a className="btn btn-danger" target="_blank" rel="nofollow" href={"http://localhost:3002/views/products/detail/"+this.state.cellphoneList.id} >Detalle del producto</a>
 					</div>
 				</div>
 			</div>
